@@ -1315,6 +1315,7 @@ dependencies = [
 name = "yew-component-library"
 version = "0.1.0"
 dependencies = [
+ "chrono",
  "gloo 0.10.0",
  "once_cell",
  "pure-rust-locales",
