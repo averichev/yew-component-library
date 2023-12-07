@@ -5,7 +5,7 @@ use yew_datepicker::Datepicker;
 
 pub struct MainView {
     selected_date: Option<NaiveDate>,
-    locale: Locale
+    locale: Locale,
 }
 
 pub enum MainViewMessage {
@@ -17,7 +17,10 @@ impl Component for MainView {
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        MainView { selected_date: None, locale: Locale::ru_RU }
+        MainView {
+            selected_date: None,
+            locale: Locale::ru_RU,
+        }
     }
 
     fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
@@ -25,13 +28,14 @@ impl Component for MainView {
             MainViewMessage::DateSelect(date) => {
                 self.selected_date = Some(date);
                 true
-            },
+            }
         }
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         let context = ctx.link().clone();
-        let on_select = move |date: NaiveDate| context.send_message(MainViewMessage::DateSelect(date));
+        let on_select =
+            move |date: NaiveDate| context.send_message(MainViewMessage::DateSelect(date));
 
         html! {
             <>
@@ -43,16 +47,11 @@ impl Component for MainView {
     }
 }
 
-
-impl MainView{
-    fn selected_date_string (&self) -> String{
+impl MainView {
+    fn selected_date_string(&self) -> String {
         match self.selected_date {
-            None => {
-                "".to_string()
-            }
-            Some(date) => {
-                date.format_localized("%v", self.locale).to_string()
-            }
+            None => "".to_string(),
+            Some(date) => date.format_localized("%v", self.locale).to_string(),
         }
     }
 }
