@@ -39,6 +39,7 @@ impl Component for MainView {
 
         html! {
             <>
+            <img src={"img/logo.png"} style="width: 200px" />
             <h1>{"Hello world!"}</h1>
             <Datepicker {on_select} />
             <div>{self.selected_date_string()}</div>
