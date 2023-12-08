@@ -1,8 +1,8 @@
-use crate::views::RootComponent;
+use crate::components::RootComponent;
 
-pub mod components;
-pub mod views;
-pub mod routes;
+mod components;
+mod routers;
+mod views;
 
 fn main() {
     yew::Renderer::<RootComponent>::new().render();

@@ -1,19 +1,19 @@
 use yew::{html, Component, Context, Html};
 
-pub struct MainView {}
+pub struct SomeComponent;
 
-impl Component for MainView {
+impl Component for SomeComponent {
     type Message = ();
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        MainView {}
+        SomeComponent {}
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
             <>
-            <h1>{"Yew component library"}</h1>
+            {"This is some component"}
             </>
         }
     }
