@@ -2166,7 +2166,7 @@ name = "yew-component-library"
 version = "0.1.0"
 dependencies = [
  "chrono",
- "gloo 0.10.0",
+ "gloo 0.11.0",
  "once_cell",
  "pure-rust-locales",
  "web-sys",
@@ -2178,9 +2178,9 @@ dependencies = [
 
 [[package]]
 name = "yew-datepicker"
-version = "0.2.2"
+version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f61e36c5c6272007c4ccac3fe32104e335b89d1dbd6d1cea596e87023f147250"
+checksum = "0932bd521bc65fbcf401efcb15beb42d10a9be2ce36794631516b7ce42652050"
 dependencies = [
  "calendarize",
  "chrono",
