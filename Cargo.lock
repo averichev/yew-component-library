@@ -2178,9 +2178,9 @@ dependencies = [
 
 [[package]]
 name = "yew-datepicker"
-version = "0.2.3"
+version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0932bd521bc65fbcf401efcb15beb42d10a9be2ce36794631516b7ce42652050"
+checksum = "880c6dcc53e8293923993c56d987b24eb53dfd03037b7c6af62bb0412b66006c"
 dependencies = [
  "calendarize",
  "chrono",
